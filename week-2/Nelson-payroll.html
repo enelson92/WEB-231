@@ -1,19 +1,31 @@
+<!--
+    Title: Nelson-payroll.html
+    Author: Erik Nelson
+    Date: 1/15/2023
+    Description: Assignment 2.3 - Declaring and defining variables with JavaScript. 
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!--This head includes the Title, CSS styling, and meta tags.-->
+    <title>WEB 231 - Enterprise JavaScript I</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>WEB 231 - Enterprise JavaScript I</title>
     <link rel="stylesheet" href="../site.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="../global.css" rel="stylesheet">
     <link href="Nelson-payroll.css" rel="stylesheet">
   </head>
+
   <body>
     <div id="container">
+      <!--This is the main title heading for this assignment.-->
         <h1 id="payroll-header">Payroll System</h1>
+        <!--The employee record 1 sub-heading.-->
         <h3>Employee record 1</h3>
+        <!--The first unordered list containing JavaScript variables.-->
         <ul>
           <li id="txtFirstNameLudwig">Ludwig</li>
           <li id="txtLastNameBeethoven">Beethoven</li>
@@ -21,7 +33,9 @@
           <li id="txtHireDateLudwig">12/9/2020</li>
           <li id="txtPayRateLudwig">18.9</li>
         </ul>
+        <!--The employee record 2 sub-heading.-->
         <h3>Employee record 2</h3>
+        <!--The second unordered list containing JavaScript variables.-->
         <ul>
           <li id="txtFirstNameTom">Tom</li>
           <li id="txtLastNameCruise">Cruise</li>
@@ -29,7 +43,9 @@
           <li id="txtHireDateTom">12/1/2021</li>
           <li id="txtPayRate">19</li>
         </ul>
+        <!--The employee record 3 sub-heading.-->
         <h3>Employee record 3</h3>
+        <!--The third unordered list containing JavaScript variables.-->
         <ul>
           <li id="txtFirstNameHarry">Harry</li>
           <li id="txtLastNamePotter">Potter</li>
@@ -37,10 +53,54 @@
           <li id="txtHireDateHarry">7/15/2020</li>
           <li id="txtPayRateHarry">20</li>
         </ul>
+        <!--Return link that will bring users to the Landing Page.-->
         <a href="../index.html" class="return-home">Return</a>
-        <script src="week-2/nelson-payroll.js">
+      </div>
 
+        <!--JavaScript to add text to the unordered lists.-->
+        <script>
+            //This section defines the different variables for the first employee.
+            const firstName1 = "Ludwig";
+            const lastName1 = "Beethoven";
+            const address1 = "505 S Main Street";
+            let txtHireDateLudwig = new Date("2020, 12, 9");
+            let hireDate1 = txtHireDateLudwig.toLocaleDateString('en-US');
+            const txtPayRateLudwig = 18.9;
+            //This section will bind the variables to the location in the html file.
+            document.getElementById("txtFirstNameLudwig").innerHTML = firstName1;
+            document.getElementById("txtLastNameBeethoven").innerHTML = lastName1;
+            document.getElementById("txtAddressLudwig").innerHTML = address1;
+            document.getElementById("txtHireDateLudwig").innerHTML = hireDate1;
+            document.getElementById("txtPayRateLudwig").innerHTML = txtPayRateLudwig.toFixed(1);
+
+            //This section defines the different variables for the second employee.
+            const firstName2 = "Tom";
+            const lastName2 = "Cruise";
+            const address2 = "123 Hollywood Blvd";
+            let txtHireDateTom = new Date("2021, 12, 1");
+            let hireDate2 = txtHireDateTom.toLocaleDateString('en-US');
+            const txtPayRateTom = 19;
+            //This section will bind the variables to the location in the html file.
+            document.getElementById("txtFirstNameTom").innerHTML = firstName2;
+            document.getElementById("txtLastNameCruise").innerHTML = lastName2;
+            document.getElementById("txtAddressTom").innerHTML = address2;
+            document.getElementById("txtHireDateTom").innerHTML = hireDate2;
+            document.getElementById("txtPayRateTom").innerHTML = txtPayRateTom.toFixed(1);
+
+            //This section defines the different variables for the third employee.
+            const firstName3 = "Harry";
+            const lastName3 = "Potter";
+            const address3 = "500 Hogwarts Way";
+            let txtHireDateHarry = new Date("2020, 7, 15");
+            let hireDate3 = txtHireDateHarry.toLocaleDateString('en-US');
+            const txtPayRateHarry = 20;
+            //This section will bind the variables to the location in the html file.
+            document.getElementById("txtFirstNameHarry").innerHTML = firstName3;
+            document.getElementById("txtLastNamePotter").innerHTML = lastName3;
+            document.getElementById("txtAddressHarry").innerHTML = address3;
+            document.getElementById("txtHireDateHarry").innerHTML = hireDate3;
+            document.getElementById("txtPayRateHarry").innerHTML = txtPayRateHarry.toFixed(1);
         </script>
-    </div>
+   
   </body>
 </html>
