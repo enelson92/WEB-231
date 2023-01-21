@@ -1,0 +1,31 @@
+/**
+    Title: nelson-temp-conversion.css
+    Author: Erik Nelson
+    Date: 1/20/2023
+    Description: CSS for nelson-temp-conversion.html page.
+*/
+
+
+#card-container {
+    width: 600px;
+    margin: 3% auto 0;
+}
+
+#form-results {
+    width: 600px;
+    margin: 3% auto 0;
+}
+
+.btn {
+    border: solid black;
+    border-radius: 5px;
+}
+
+#celsius-results {
+    font-size: 28px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}

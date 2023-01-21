@@ -1,0 +1,61 @@
+<!--
+  Title: nelson-temp-conversion.html
+  Author: Erik Nelson
+  Date: 1/20/2023
+  Description: Linking and Using JavaScript for a Temperature Conversion App
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--This head contains the file title, stylesheets/CSS links-->
+        <title>WEB 231 - Enterprise JavaScript I</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link href="../global.css" rel="stylesheet">
+        <link href="../site.css" rel="stylesheet">
+        <link href="nelson-temp-conversion.css" rel="stylesheet">
+      </head>
+
+      <body>
+        <div id="container">
+            <h1 class="app-header">Welcome to the Temperature Conversion App!</h1>
+            <div id="card-container">
+                <div class="card">
+                    <div class="card-title">Fahrenheit to Celsius Converter</div>
+                    <div class="card-content">
+                        <div class="form">
+                            <div class="form-field">
+                                <label for="txtFahrenheit">Fahrenheit value:</label>
+                                <input type="text" id="txtFahrenheit" class="input" name="fahrenheit" />
+                            </div>
+                            <div class="form-field">
+                                <button onclick="degreeConversion()" class="btn btn-primary full-width">Convert Temperature</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div id="form-results">
+                <div class="card">
+                    <div class="card-title">Conversion Results</div>
+                    <div class="card-content" id="celsius-results">
+                    </div>
+                </div>
+            </div>
+    
+            <a class= "return-home" href="../index.html">Return</a>
+            
+            <script>
+                function degreeConversion() {
+                    let fahrenheit = document.getElementById("txtFahrenheit").value;
+                    const celsius = ((parseFloat(fahrenheit) - 32) / 1.8).toFixed(2);
+                    document.getElementById('celsius-results').innerHTML = celsius;
+                }
+            </script>
+        </div>
+          
+    </body>
+</html>
