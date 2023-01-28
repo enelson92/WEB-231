@@ -8,3 +8,8 @@
 h1 {
     text-align: center;
 }
+
+#numberResults {
+    font-size: 28px;
+    text-align: center;
+}

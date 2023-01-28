@@ -29,10 +29,10 @@
                         <div class="form">
                             <div class="form-field">
                                 <label for="txtMyNumber">Guess the number:</label>
-                                <input type="text" id="txtMyNumber" class="input" name="fahrenheit" />
+                                <input type="text" id="txtMyNumber" class="input" name="" />
                             </div>
                             <div class="form-field">
-                                <button onclick="degreeConversion()" class="btn btn-primary full-width" id="btnSubmit">Submit</button>
+                                <button onclick="guessNumber()" class="btn btn-primary full-width" id="btnSubmit">Submit</button>
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
             <div id="form-results">
                 <div class="card">
                     <div class="card-title">Results</div>
-                    <div class="card-content" id="results">
+                    <div class="card-content" id="numberResults">
                     </div>
                 </div>
             </div>
@@ -51,7 +51,19 @@
             
           
             <script>
+                const rnd = Math.floor(Math.random() * 10) + 1;
+                function guessNumber() {
+                    const myNumber = document.getElementById("txtMyNumber").value;
+                    if (myNumber > rnd) {
+                        document.getElementById("numberResults").innerHTML = "The number is less than " + myNumber;
+                    } else if (myNumber < rnd) {
+                        document.getElementById("numberResults").innerHTML = "The number is greater than " + myNumber;
+                    } else {
+                        document.getElementById("numberResults").innerHTML = "Congratulations! You picked the correct number!"
+                    }
+                    }
                 
+
             </script>
         </div>
           
