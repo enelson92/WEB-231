@@ -21,17 +21,22 @@
 
       <body>
         <div id="container">
+            <!--Main title heading for the numbers game.-->
             <h1 class="app-header">Welcome to the numbers game!</h1>
+            <!--Container for the card to guess the number and submit button.-->
             <div id="card-container">
                 <div class="card">
                     <div class="card-title">Pick a number between 1 and 10</div>
                     <div class="card-content">
                         <div class="form">
                             <div class="form-field">
+                                <!--Label for the form to enter a number guess.-->
                                 <label for="txtMyNumber">Guess the number:</label>
+                                <!--The text form where a user will input their number guess.-->
                                 <input type="text" id="txtMyNumber" class="input" name="" />
                             </div>
                             <div class="form-field">
+                                <!--The button where users will submit their number guess and will receive a result.-->
                                 <button onclick="guessNumber()" class="btn btn-primary full-width" id="btnSubmit">Submit</button>
                             </div>
                         </div>
@@ -39,6 +44,7 @@
                 </div> 
             </div>
             <div id="form-results">
+                <!--This is where the number guess results will appear.-->
                 <div class="card">
                     <div class="card-title">Results</div>
                     <div class="card-content" id="numberResults">
@@ -51,14 +57,22 @@
             
           
             <script>
+                //Creates a random number 1-10 that is assigned to const rnd.
                 const rnd = Math.floor(Math.random() * 10) + 1;
+                //Function that generates the result from the guessed number.
                 function guessNumber() {
+                    //Assigns the myNumber variable from the HTML document. 
                     const myNumber = document.getElementById("txtMyNumber").value;
+                    //If user's guess number is greater than the value of rdn, the results will display this message:
                     if (myNumber > rnd) {
                         document.getElementById("numberResults").innerHTML = "The number is less than " + myNumber;
-                    } else if (myNumber < rnd) {
+                    } 
+                    //If user's guessed number is less than the value of rdn, the results will display this message:
+                    else if (myNumber < rnd) {
                         document.getElementById("numberResults").innerHTML = "The number is greater than " + myNumber;
-                    } else {
+                    } 
+                    //If user's guessed number is the same value of rdn, the results will display this message:
+                    else {
                         document.getElementById("numberResults").innerHTML = "Congratulations! You picked the correct number!"
                     }
                     }
