@@ -66,13 +66,13 @@
         </div>
 
         <script>
-            //Function for the results of the selected number sequence.
+            //Function to display the results of the number sequence that is selected.
             function numberSequence() {
                 //This variable defines 'choice'.
                 let choice = document.getElementById("sequence").value;
 
               
-                //If the Fibonacci Sequence is chosen, a while loop will create a sequence with numbers less than 40.
+                //If user selects the Fibonacci Sequence, a while loop will create a sequence with numbers less than 40.
                 if (choice == "fibonacci") {
                     //Defines variables fibonacciSequenceText, num1, num2, and next. 
                     let fibonacciSequenceText = "";
@@ -93,7 +93,7 @@
                     }
                     //Binds the Fibonacci sequence to the results card. 
                     document.getElementById("sequenceResults").innerHTML = fibonacciSequenceText.slice(0, -2);
-                //If the even sequence is chosen, a do loop will be created to display the sequence with numbers less than 20.
+                //If the user selects the even sequence, a do loop will display the sequence with numbers less than 20.
                 } else if (choice == "even") {
                     //Defines the variables evenSequence, num1, num2, and next.
                     let evenSequence = "";
@@ -110,7 +110,7 @@
                     } while (num1 < 20);
                     //Binds the Even Numbers sequence to the results card. 
                     document.getElementById("sequenceResults").innerHTML = evenSequence.slice(0, -2);
-                //If the odd sequence is chosen, a for loop will be created to display the sequence with numbers less than 20.
+                //If the user selects the odd sequence, a for loop will display the sequence with numbers less than 20.
                 } else if (choice == "odd") {
                     //Defines the variable 'oddSequence'.
                     let oddSequence = "";
