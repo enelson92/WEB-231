@@ -44,7 +44,7 @@
                             </select>
                         </div>
                         <div class="form-field">
-                            <!--Button for users to click, which will display the results of the selected number sequence-->
+                            <!--Button for users to click, which will display the results of the selected number sequence.-->
                             <button onclick="numberSequence()" id="btnDisplaySequence" class="btn btn-primary full-width">Display Sequence</button>
                         </div>
                     </div>
@@ -56,7 +56,7 @@
             <div class="card">
                 <!--This is the results card title.-->
                 <div class="card-title"> Sequence Results</div>
-                <!--Results will appear here-->
+                <!--Results will appear here.-->
                 <div class="card-content" id="sequenceResults">
 
                 </div>
@@ -66,23 +66,23 @@
         </div>
 
         <script>
-            //This is the function that will display the results of the selected sequences.
+            //Function for the results of the selected number sequence.
             function numberSequence() {
-                //This defines the variable 'choice'.
+                //This variable defines 'choice'.
                 let choice = document.getElementById("sequence").value;
 
               
-                //If Fibonacci Sequence is chosen, a while loop will create the sequence with numbers less than 40.
+                //If the Fibonacci Sequence is chosen, a while loop will create a sequence with numbers less than 40.
                 if (choice == "fibonacci") {
                     //Defines variables fibonacciSequenceText, num1, num2, and next. 
                     let fibonacciSequenceText = "";
                     let num1 = 0;
                     let num2 = 1;
                     let next;
-                    //This is the start of the while loop.
+                    //Start of the while loop.
                     while (num1 < 40)
                     {
-                        //This is the string that the results card will display.
+                        //The string that will display the results.
                         fibonacciSequenceText += num1 + ", ";
                         //This will be 0+1.
                         next = num1 + num2;
@@ -93,28 +93,28 @@
                     }
                     //Binds the Fibonacci sequence to the results card. 
                     document.getElementById("sequenceResults").innerHTML = fibonacciSequenceText.slice(0, -2);
-                //If the even sequence is chosen, a do loop will be created to give the sequence with numbers less than 20.
+                //If the even sequence is chosen, a do loop will be created to display the sequence with numbers less than 20.
                 } else if (choice == "even") {
                     //Defines the variables evenSequence, num1, num2, and next.
                     let evenSequence = "";
                     let num1 = 0;
                     let num2= 1;
                     let next;
-                    //This is the start of the do loop.
+                    //Start of the do loop.
                     do {
-                        //This is the string that the results card will display.
+                        //The string that will display the results.
                         evenSequence += num1 + ", ";
-                        //Stating at 0, the next number will add 2 to itself.
+                        //Sequence starts at 0, and the next number will add 2 to itself.
                         next = num1 + 2;
                         num1 = next;
                     } while (num1 < 20);
                     //Binds the Even Numbers sequence to the results card. 
                     document.getElementById("sequenceResults").innerHTML = evenSequence.slice(0, -2);
-                //If the odd sequence is chosen, a for loop will be created to give the sequence with numbers less than 20.
+                //If the odd sequence is chosen, a for loop will be created to display the sequence with numbers less than 20.
                 } else if (choice == "odd") {
-                    //Defines the variable oddSequence.
+                    //Defines the variable 'oddSequence'.
                     let oddSequence = "";
-                    //Start of the for loop. This defines the num1 values.
+                    //Start of the for loop which defines the values for num1.
                     for (let num1 = 1; num1 < 20; num1 += 2) {
                         if ((num1 % 2) == 0); {
                             oddSequence += num1 + ", ";
