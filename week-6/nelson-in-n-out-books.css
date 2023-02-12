@@ -1,0 +1,67 @@
+/**
+    Title: nelson-in-n-out-books.css
+    Author: Erik
+    Date: 2/12/2023
+    Description: CSS Styling for nelson-in-n-out-books
+*/
+
+h1 {
+    text-align: center;
+}
+
+.btn {
+    border: solid black;
+    border-radius: 5px;
+}
+
+#booksTable {
+    font-size: 28px;
+    text-align: center;
+}
+
+#authorsTable {
+    font-size: 28px;
+    text-align: center;
+}
+
+#titleTable {
+    font-size: 28px;
+}
+
+tbody {
+    font-size: 28px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+th {
+    font-size: 28px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4f3674;
+    color: white;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+tr:hover {
+    background-color: #d6a800;
+    color: #4f3674;
+    cursor: pointer;
+}
+
+#favorite-authors {
+    display: none;
+}
+
+#favorite-books {
+    display: none;
+}
