@@ -1,0 +1,20 @@
+/**
+    Title: nelson-alphabet-game.css
+    Author: Erik Nelson
+    Date: 2/25/2023
+    Description: CSS Styling for nelson-alphabet-game assignment
+*/
+
+h1 {
+    text-align: center;
+}
+
+.btn {
+    border: solid black;
+    border-radius: 5px;
+}
+
+#letters, #letterResult {
+    text-align: center;
+    font-size: 28px;
+}
