@@ -1,0 +1,32 @@
+/**
+    Title: nelson-alphabet-game.css
+    Author: Erik Nelson
+    Date: 3/5/2023
+    Description: CSS Styling for nelson-card-game Final Project
+*/
+
+h1 {
+    text-align: center;
+}
+
+.btn {
+    border: solid black;
+    border-radius: 5px;
+}
+
+.player-card {
+    text-align: center;
+}
+
+#player-cards {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+    grid-gap: 10px 10px;
+  
+}
+
+.card {
+    margin-right: auto;
+    margin-left: auto;
+}
